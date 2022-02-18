@@ -31,7 +31,11 @@ class User {
     }
 
     getBookNames(){
-
+        var bookNames = this.libros.map(function(obj){
+            var rObj = {}
+            return rObj=obj.Nombre;
+        })
+        return bookNames;
     }
 }
 
@@ -43,4 +47,5 @@ p.addMascota(`gato`)
 console.log(p.mascotas);
 console.log(p.countMascotas())
 p.addBook(`the bible`,`god`)
-console.log(p.libros[1])
+console.log(p.libros)
+console.log(p.getBookNames())
