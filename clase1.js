@@ -22,7 +22,7 @@ class User {
     }
 
     addBook(nombre, autor){
-        var libro = new Object();
+        let libro = new Object();
         libro.Nombre= nombre;
         libro.Autor = autor;
 
@@ -31,8 +31,8 @@ class User {
     }
 
     getBookNames(){
-        var bookNames = this.libros.map(function(obj){
-            var rObj = {}
+        let bookNames = this.libros.map(function(obj){
+            let rObj = {}
             return rObj=obj.Nombre;
         })
         return bookNames;
@@ -40,7 +40,7 @@ class User {
 }
 
 
-const p = new User(`karla`, 'vergara', [{Nombre: `escarabajo de oro`, autor: `edgar allan poe`}] , [`perro`])
+const p = new User(`karla`, 'vergara', [{Nombre: `escarabajo de oro`, Autor: `edgar allan poe`}] , [`perro`])
 
 console.log(p.getFullName())
 p.addMascota(`gato`)
@@ -49,3 +49,4 @@ console.log(p.countMascotas())
 p.addBook(`the bible`,`god`)
 console.log(p.libros)
 console.log(p.getBookNames())
+
