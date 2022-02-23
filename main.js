@@ -20,4 +20,4 @@ Num.forEach(countFunc)
 console.log(Num)
 console.log(countObj);
 
-
+//ejercicio 2
