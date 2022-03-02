@@ -1,0 +1,23 @@
+{
+  "name": "backend-coder",
+  "version": "1.0.0",
+  "description": "backend coder clases (no proyecto)",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ytabeloved/backend-coder.git"
+  },
+  "author": "shoooo bella",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ytabeloved/backend-coder/issues"
+  },
+  "homepage": "https://github.com/ytabeloved/backend-coder#readme",
+  "dependencies": {
+    "moment": "^2.29.1",
+    "nodemon": "^2.0.15"
+  }
+}

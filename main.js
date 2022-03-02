@@ -15,9 +15,22 @@ let countFunc = keys => {
 
 
 
-randNum();
+/*randNum();
 Num.forEach(countFunc)
 console.log(Num)
-console.log(countObj);
+console.log(countObj);*/
 
-//ejercicio 2
+//ejercicio 3
+
+const momnt =require('moment');
+const { diff } = require('semver')
+
+let today = momnt(Date.now())
+let bday = momnt('1987-11-04')
+
+
+console.log(`hoy es ${today.format('DD/MM/YYYY')}`)
+console.log(`naci el ${bday.format('DD/MM/YYYY')}`)
+console.log(`naci hace ${today-bday.format('YYYY')}`)
+
+
