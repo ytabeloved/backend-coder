@@ -23,3 +23,5 @@ app.get('/api/letras/:num', (req, res)=>{
         : res.send('404 not found')
     }
 })
+
+//ruta get 'get/api/sumar/:num1/:num2
