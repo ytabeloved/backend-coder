@@ -1,36 +1,25 @@
-let Num=[]
-let countObj={}
+const express = require('express')
+const app =express()
+const PORT = 8080
 
-const randNum = () =>{
-    for(i=0; i<10;i++){
-        Num.push(Math.floor(Math.random()*21)+1)
+const server =app.listen(PORT,()=>{
+    console.log(`server up en el puerto ${server.address().port}`)
+})
+
+const frase= 'hello world im a server'
+
+app.get('/api/frase', (req, res) => {
+    res.send(frase)
+})
+
+app.get('/api/letras/:num', (req, res)=>{
+    const letra = frase[req.params.num]
+    //res.json(letra)
+    if(isNaN(req.params.num)){
+        res.json({error: 'el parametro no es numero'})
+    } else {
+        letra !==undefined
+        ? res.send(letra)
+        : res.send('404 not found')
     }
-    console.log(Num)
-}
-
-
-let countFunc = keys => {
-    countObj[keys] = ++countObj[keys] || 1;
-}
-
-
-
-/*randNum();
-Num.forEach(countFunc)
-console.log(Num)
-console.log(countObj);*/
-
-//ejercicio 3
-
-const momnt =require('moment');
-const { diff } = require('semver')
-
-let today = momnt(Date.now())
-let bday = momnt('1987-11-04')
-
-
-console.log(`hoy es ${today.format('DD/MM/YYYY')}`)
-console.log(`naci el ${bday.format('DD/MM/YYYY')}`)
-console.log(`naci hace ${today-bday.format('YYYY')}`)
-
-
+})
